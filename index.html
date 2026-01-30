@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STER FIB | Raffinage & Silice de Haute Précision</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-heading { font-family: 'Montserrat', sans-serif; }
+        .hero-sand {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1533221216134-c4301f11fa9c?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover; background-position: center; background-attachment: fixed;
+        }
+        .gold-brand { color: #C29B40; }
+        .bg-gold { background-color: #C29B40; }
+        .card-shadow:hover { transform: translateY(-10px); box-shadow: 0 30px 60px -12px rgba(194, 155, 64, 0.25); }
+    </style>
+</head>
+<body class="bg-[#FAF9F6]">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-3xl font-black italic tracking-tighter text-slate-900">STER <span class="gold-brand">FIB</span></div>
+            <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-widest">
+                <a href="#catalogue" class="hover:gold-brand transition">Catalogue</a>
+                <a href="#calculateur" class="hover:gold-brand transition">Calculateur</a>
+                <a href="#eco" class="hover:gold-brand transition">Engagement</a>
+                <a href="#contact" class="bg-slate-900 text-white px-6 py-2 rounded-full hover:bg-gold-brand transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="h-screen hero-sand flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-5xl">
+            <h1 class="font-heading text-6xl md:text-8xl font-black mb-6 leading-tight uppercase">L’Ingénierie du Grain <br><span class="gold-brand">à l’état pur</span></h1>
+            <p class="text-xl md:text-2xl font-light mb-10 text-gray-300">Solutions de silice raffinée pour la filtration, le sport et l'industrie.</p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="#catalogue" class="bg-gold px-10 py-4 rounded-lg font-black uppercase tracking-widest hover:scale-105 transition shadow-2xl">Nos Produits</a>
+                <a href="#calculateur" class="border-2 border-white px-10 py-4 rounded-lg font-black uppercase tracking-widest hover:bg-white hover:text-black transition">Calculateur de volume</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="catalogue" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="font-heading text-4xl font-black uppercase tracking-tighter mb-4">Notre Expertise Minérale</h2>
+            <div class="h-1 w-20 bg-gold mx-auto mb-8"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white p-8 rounded-3xl border border-gray-100 card-shadow transition-all duration-300">
+                <div class="text-4xl mb-6">💧</div>
+                <h3 class="font-heading font-black text-xl mb-4">FILTRATION</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Sable de quartz purifié pour le traitement des eaux potables et industrielles. Granulométrie contrôlée.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-gray-100 card-shadow transition-all duration-300">
+                <div class="text-4xl mb-6">🧱</div>
+                <h3 class="font-heading font-black text-xl mb-4">CIMENT-COLLE</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Silice ultra-fine pour mortiers techniques. Assure une liaison mécanique et une adhérence supérieure.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-gray-100 card-shadow transition-all duration-300">
+                <div class="text-4xl mb-6">⛳</div>
+                <h3 class="font-heading font-black text-xl mb-4">SPORT / GAZON</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Lestage de gazon synthétique. Grains arrondis pour protéger les fibres et optimiser le drainage.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-gray-100 card-shadow transition-all duration-300">
+                <div class="text-4xl mb-6">⚙️</div>
+                <h3 class="font-heading font-black text-xl mb-4">SABLAGE</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Abrasifs de haute dureté (7 Mohs) pour décapage industriel et préparation de surfaces.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculateur" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto px-6 bg-white/5 p-12 rounded-[3rem] border border-white/10 backdrop-blur">
+            <h2 class="font-heading text-3xl font-black mb-8 text-center uppercase tracking-widest">Calculateur de <span class="gold-brand">Tonnage</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-400 mb-2">Longueur (m)</label>
+                    <input type="number" id="L" value="10" oninput="val()" class="w-full bg-transparent border-b-2 border-white/20 py-2 outline-none focus:border-gold font-bold text-2xl text-gold">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-400 mb-2">Largeur (m)</label>
+                    <input type="number" id="l" value="5" oninput="val()" class="w-full bg-transparent border-b-2 border-white/20 py-2 outline-none focus:border-gold font-bold text-2xl text-gold">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-400 mb-2">Épaisseur (cm)</label>
+                    <input type="number" id="e" value="10" oninput="val()" class="w-full bg-transparent border-b-2 border-white/20 py-2 outline-none focus:border-gold font-bold text-2xl text-gold">
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <p class="text-gray-400 uppercase text-xs font-bold mb-2 tracking-widest">Besoin estimé</p>
+                <div class="text-6xl font-black"><span id="res">8.00</span> <span class="text-xl text-gold">TONNES</span></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function val() {
+            let L = document.getElementById('L').value;
+            let l = document.getElementById('l').value;
+            let e = document.getElementById('e').value;
+            let res = (L * l * (e/100)) * 1.6;
+            document.getElementById('res').innerText = res.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>
